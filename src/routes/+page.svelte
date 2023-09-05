@@ -19,5 +19,11 @@
 		{#each $caps as cap, index}
 			<CapItem {cap} {index} />
 		{/each}
+
+		{#if $caps.length === 0}
+			<div class="flex flex-col flex-center w-full">
+				<p class="text-muted-foreground italic text-sm">Nothing Yet to see!</p>
+			</div>
+		{/if}
 	</Accordion.Root>
 </div>
